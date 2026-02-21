@@ -1,0 +1,21 @@
+# 排除 Unity 自动生成的项目文件
+*.csproj
+*.sln
+*.user
+*.userprefs
+
+# 排除 Unity 缓存与临时目录
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[探]Logs/
+/[Uu]ser[Ss]ettings/
+
+# 排除 IDE 配置文件
+.vscode/
+.vs/
+
+# 排除系统产生的杂质
+.DS_Store
+Thumbs.db

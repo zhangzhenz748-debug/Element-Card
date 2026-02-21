@@ -1,0 +1,35 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+[System.Serializable] 
+public class CardData
+{
+    public string cardName;   // 卡牌名称
+    public Sprite cardImage;  // 卡牌图片
+    public int power;         // 你甚至可以顺便加个数值
+}
+public class CardManager : MonoBehaviour
+{
+    public CardData[] cardDatas;
+    public static CardManager Cardmanager{get;private set;}
+    void Awake()
+    {
+        if(Cardmanager!=null&&Cardmanager!=this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        Cardmanager=this;
+    }
+    public Sprite Cardimage(string name)//查找素材
+    {
+        foreach(var a in cardDatas)
+        {
+            if(a.cardName==name)
+            {
+                return a.cardImage;
+            }
+        }
+        return null;
+    }
+}
