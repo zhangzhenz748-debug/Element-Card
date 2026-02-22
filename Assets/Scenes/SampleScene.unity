@@ -380,6 +380,7 @@ RectTransform:
   - {fileID: 824695740}
   - {fileID: 1947051976}
   - {fileID: 553940568}
+  - {fileID: 1089004842}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -6130,6 +6131,42 @@ MonoBehaviour:
   damp: 10
   mass: 1
   spring: 800
+--- !u!1 &1089004841
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1089004842}
+  m_Layer: 5
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1089004842
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1089004841}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1678151251}
+  m_Father: {fileID: 450108183}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1399683503
 GameObject:
   m_ObjectHideFlags: 0
@@ -6258,159 +6295,211 @@ MonoBehaviour:
   cardDatas:
   - cardName: "\u7EFF\u724C1"
     cardImage: {fileID: -1519818927, guid: bad08c95f89d1f845a97f2b204718377, type: 3}
+    cardEffect: {fileID: 0}
     power: 0
   - cardName: "\u7EFF\u724C2"
     cardImage: {fileID: 1511012806, guid: bad08c95f89d1f845a97f2b204718377, type: 3}
+    cardEffect: {fileID: 0}
     power: 0
   - cardName: "\u7EFF\u724C3"
     cardImage: {fileID: 870642158, guid: bad08c95f89d1f845a97f2b204718377, type: 3}
+    cardEffect: {fileID: 0}
     power: 0
   - cardName: "\u7EFF\u724C4"
     cardImage: {fileID: 288250973, guid: bad08c95f89d1f845a97f2b204718377, type: 3}
+    cardEffect: {fileID: 0}
     power: 0
   - cardName: "\u7EFF\u724C5"
     cardImage: {fileID: 2053167699, guid: bad08c95f89d1f845a97f2b204718377, type: 3}
+    cardEffect: {fileID: 0}
     power: 0
   - cardName: "\u7EFF\u724C6"
     cardImage: {fileID: 2124531913, guid: bad08c95f89d1f845a97f2b204718377, type: 3}
+    cardEffect: {fileID: 0}
     power: 0
   - cardName: "\u7EFF\u724C7"
     cardImage: {fileID: 1371554690, guid: bad08c95f89d1f845a97f2b204718377, type: 3}
+    cardEffect: {fileID: 0}
     power: 0
   - cardName: "\u7EFF\u724C8"
     cardImage: {fileID: 1435087011, guid: bad08c95f89d1f845a97f2b204718377, type: 3}
+    cardEffect: {fileID: 0}
     power: 0
   - cardName: "\u7EFF\u724C9"
     cardImage: {fileID: -1005166595, guid: bad08c95f89d1f845a97f2b204718377, type: 3}
+    cardEffect: {fileID: 0}
     power: 0
   - cardName: "\u7EFF\u724C10"
     cardImage: {fileID: -1561755966, guid: bad08c95f89d1f845a97f2b204718377, type: 3}
+    cardEffect: {fileID: 0}
     power: 0
   - cardName: "\u7EFF\u724C11"
     cardImage: {fileID: -1619811724, guid: bad08c95f89d1f845a97f2b204718377, type: 3}
+    cardEffect: {fileID: 0}
     power: 0
   - cardName: "\u7EFF\u724C12"
     cardImage: {fileID: -1327569062, guid: bad08c95f89d1f845a97f2b204718377, type: 3}
+    cardEffect: {fileID: 0}
     power: 0
   - cardName: "\u7EFF\u724C13"
     cardImage: {fileID: -1778917843, guid: bad08c95f89d1f845a97f2b204718377, type: 3}
+    cardEffect: {fileID: 0}
     power: 0
   - cardName: "\u9ED1\u724C1"
     cardImage: {fileID: 1719066626, guid: bad08c95f89d1f845a97f2b204718377, type: 3}
+    cardEffect: {fileID: 0}
     power: 0
   - cardName: "\u9ED1\u724C2"
     cardImage: {fileID: 253607483, guid: bad08c95f89d1f845a97f2b204718377, type: 3}
+    cardEffect: {fileID: 0}
     power: 0
   - cardName: "\u9ED1\u724C3"
     cardImage: {fileID: -1738132208, guid: bad08c95f89d1f845a97f2b204718377, type: 3}
+    cardEffect: {fileID: 0}
     power: 0
   - cardName: "\u9ED1\u724C4"
     cardImage: {fileID: -204046033, guid: bad08c95f89d1f845a97f2b204718377, type: 3}
+    cardEffect: {fileID: 0}
     power: 0
   - cardName: "\u9ED1\u724C5"
     cardImage: {fileID: 1984982771, guid: bad08c95f89d1f845a97f2b204718377, type: 3}
+    cardEffect: {fileID: 0}
     power: 0
   - cardName: "\u9ED1\u724C6"
     cardImage: {fileID: -377760119, guid: bad08c95f89d1f845a97f2b204718377, type: 3}
+    cardEffect: {fileID: 0}
     power: 0
   - cardName: "\u9ED1\u724C7"
     cardImage: {fileID: 1427332409, guid: bad08c95f89d1f845a97f2b204718377, type: 3}
+    cardEffect: {fileID: 0}
     power: 0
   - cardName: "\u9ED1\u724C8"
     cardImage: {fileID: 738644445, guid: bad08c95f89d1f845a97f2b204718377, type: 3}
+    cardEffect: {fileID: 0}
     power: 0
   - cardName: "\u9ED1\u724C9"
     cardImage: {fileID: -1771264213, guid: bad08c95f89d1f845a97f2b204718377, type: 3}
+    cardEffect: {fileID: 0}
     power: 0
   - cardName: "\u9ED1\u724C10"
     cardImage: {fileID: 1709126986, guid: bad08c95f89d1f845a97f2b204718377, type: 3}
+    cardEffect: {fileID: 0}
     power: 0
   - cardName: "\u9ED1\u724C11"
     cardImage: {fileID: -728096000, guid: bad08c95f89d1f845a97f2b204718377, type: 3}
+    cardEffect: {fileID: 0}
     power: 0
   - cardName: "\u9ED1\u724C12"
     cardImage: {fileID: 310491424, guid: bad08c95f89d1f845a97f2b204718377, type: 3}
+    cardEffect: {fileID: 0}
     power: 0
   - cardName: "\u9ED1\u724C13"
     cardImage: {fileID: -833069310, guid: bad08c95f89d1f845a97f2b204718377, type: 3}
+    cardEffect: {fileID: 0}
     power: 0
   - cardName: "\u7EA2\u724C1"
     cardImage: {fileID: -9530238, guid: bad08c95f89d1f845a97f2b204718377, type: 3}
+    cardEffect: {fileID: 0}
     power: 0
   - cardName: "\u7EA2\u724C2"
     cardImage: {fileID: 1299173157, guid: bad08c95f89d1f845a97f2b204718377, type: 3}
+    cardEffect: {fileID: 0}
     power: 0
   - cardName: "\u7EA2\u724C3"
     cardImage: {fileID: 814394216, guid: bad08c95f89d1f845a97f2b204718377, type: 3}
+    cardEffect: {fileID: 0}
     power: 0
   - cardName: "\u7EA2\u724C4"
     cardImage: {fileID: -1032130651, guid: bad08c95f89d1f845a97f2b204718377, type: 3}
+    cardEffect: {fileID: 0}
     power: 0
   - cardName: "\u7EA2\u724C5"
     cardImage: {fileID: -248541555, guid: bad08c95f89d1f845a97f2b204718377, type: 3}
+    cardEffect: {fileID: 0}
     power: 0
   - cardName: "\u7EA2\u724C6"
     cardImage: {fileID: -37481354, guid: bad08c95f89d1f845a97f2b204718377, type: 3}
+    cardEffect: {fileID: 0}
     power: 0
   - cardName: "\u7EA2\u724C7"
     cardImage: {fileID: 1451500745, guid: bad08c95f89d1f845a97f2b204718377, type: 3}
+    cardEffect: {fileID: 0}
     power: 0
   - cardName: "\u7EA2\u724C8"
     cardImage: {fileID: -83967375, guid: bad08c95f89d1f845a97f2b204718377, type: 3}
+    cardEffect: {fileID: 0}
     power: 0
   - cardName: "\u7EA2\u724C9"
     cardImage: {fileID: 473518469, guid: bad08c95f89d1f845a97f2b204718377, type: 3}
+    cardEffect: {fileID: 0}
     power: 0
   - cardName: "\u7EA2\u724C10"
     cardImage: {fileID: -1538597144, guid: bad08c95f89d1f845a97f2b204718377, type: 3}
+    cardEffect: {fileID: 0}
     power: 0
   - cardName: "\u7EA2\u724C11"
     cardImage: {fileID: 799142217, guid: bad08c95f89d1f845a97f2b204718377, type: 3}
+    cardEffect: {fileID: 0}
     power: 0
   - cardName: "\u7EA2\u724C12"
     cardImage: {fileID: 655318193, guid: bad08c95f89d1f845a97f2b204718377, type: 3}
+    cardEffect: {fileID: 0}
     power: 0
   - cardName: "\u7EA2\u724C13"
     cardImage: {fileID: 718788261, guid: bad08c95f89d1f845a97f2b204718377, type: 3}
+    cardEffect: {fileID: 0}
     power: 0
   - cardName: "\u7D2B\u724C1"
     cardImage: {fileID: 1682154659, guid: bad08c95f89d1f845a97f2b204718377, type: 3}
+    cardEffect: {fileID: 0}
     power: 0
   - cardName: "\u7D2B\u724C2"
     cardImage: {fileID: 1768017527, guid: bad08c95f89d1f845a97f2b204718377, type: 3}
+    cardEffect: {fileID: 0}
     power: 0
   - cardName: "\u7D2B\u724C3"
     cardImage: {fileID: -1850721987, guid: bad08c95f89d1f845a97f2b204718377, type: 3}
+    cardEffect: {fileID: 0}
     power: 0
   - cardName: "\u7D2B\u724C4"
     cardImage: {fileID: -470341917, guid: bad08c95f89d1f845a97f2b204718377, type: 3}
+    cardEffect: {fileID: 0}
     power: 0
   - cardName: "\u7D2B\u724C5"
     cardImage: {fileID: 1380115656, guid: bad08c95f89d1f845a97f2b204718377, type: 3}
+    cardEffect: {fileID: 0}
     power: 0
   - cardName: "\u7D2B\u724C6"
     cardImage: {fileID: -132958752, guid: bad08c95f89d1f845a97f2b204718377, type: 3}
+    cardEffect: {fileID: 0}
     power: 0
   - cardName: "\u7D2B\u724C7"
     cardImage: {fileID: 1447598965, guid: bad08c95f89d1f845a97f2b204718377, type: 3}
+    cardEffect: {fileID: 0}
     power: 0
   - cardName: "\u7D2B\u724C8"
     cardImage: {fileID: -1665584746, guid: bad08c95f89d1f845a97f2b204718377, type: 3}
+    cardEffect: {fileID: 0}
     power: 0
   - cardName: "\u7D2B\u724C9"
     cardImage: {fileID: -1282709519, guid: bad08c95f89d1f845a97f2b204718377, type: 3}
+    cardEffect: {fileID: 0}
     power: 0
   - cardName: "\u7D2B\u724C10"
     cardImage: {fileID: -1368193870, guid: bad08c95f89d1f845a97f2b204718377, type: 3}
+    cardEffect: {fileID: 0}
     power: 0
   - cardName: "\u7D2B\u724C11"
     cardImage: {fileID: 993289984, guid: bad08c95f89d1f845a97f2b204718377, type: 3}
+    cardEffect: {fileID: 0}
     power: 0
   - cardName: "\u7D2B\u724C12"
     cardImage: {fileID: -86792287, guid: bad08c95f89d1f845a97f2b204718377, type: 3}
+    cardEffect: {fileID: 0}
     power: 0
   - cardName: "\u7D2B\u724C13"
     cardImage: {fileID: -1730183593, guid: bad08c95f89d1f845a97f2b204718377, type: 3}
+    cardEffect: {fileID: 0}
     power: 0
 --- !u!1 &1512168462
 GameObject:
@@ -6421,6 +6510,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1512168463}
+  - component: {fileID: 1512168464}
   m_Layer: 5
   m_Name: "\u654C\u4EBA\u7BA1\u7406\u5668"
   m_TagString: Untagged
@@ -6448,6 +6538,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1512168464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1512168462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3593c9838bc22fb40a7a98e27035485a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &1587454059 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5077472571580267204, guid: 3d2367143e8ceb24fa85f64742d3058c, type: 3}
@@ -6464,6 +6566,81 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7061cb52f0a10c4eb7e9ee33674a4ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1678151250
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1678151251}
+  - component: {fileID: 1678151253}
+  - component: {fileID: 1678151252}
+  m_Layer: 5
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1678151251
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1678151250}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1089004842}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1678151252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1678151250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1678151253
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1678151250}
+  m_CullTransparentMesh: 1
 --- !u!1 &1779821441
 GameObject:
   m_ObjectHideFlags: 0
@@ -6498,7 +6675,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 15.8, y: -0.9}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1779821443
@@ -6521,17 +6698,17 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: "\u56DE\u5408\u7ED3\u675F\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4b961621b3b450e488a0d89cfb08b2b5, type: 2}
+  m_sharedMaterial: {fileID: -9054645809617654685, guid: 4b961621b3b450e488a0d89cfb08b2b5, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -6548,8 +6725,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -6802,7 +6979,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 547, y: -272}
+  m_AnchoredPosition: {x: 651, y: -267}
   m_SizeDelta: {x: 200, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1947051977

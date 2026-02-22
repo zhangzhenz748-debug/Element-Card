@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
-public class JsonStorage : MonoBehaviour
+public class JsonStorage : MonoBehaviour//保存文件
 {
     public static void Save(Object game)
     {

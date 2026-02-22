@@ -8,7 +8,7 @@ public abstract class CardDecorator :ICardEffect//抽象装饰器
     {
         cardEffect=card;
     }
-    public virtual void Excute(AbstractGameAction action)
+    public override void Excute(AbstractGameAction action)
     {
         cardEffect.Excute(action);
     }

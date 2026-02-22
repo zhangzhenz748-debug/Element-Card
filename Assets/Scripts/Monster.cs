@@ -15,12 +15,10 @@ public class Monster : MonoBehaviour,IDropHandler//生物类
     void Start()
     {
         animator=GetComponent<Animator>();
-        Maxblood=100;
         blood=Maxblood;
-        shield=9;
     }
     //攻击力
-    public virtual void OnDrop(PointerEventData eventData)
+    public virtual void OnDrop(PointerEventData eventData)//将自己添加给卡牌
     {
         GameObject cardObject = eventData.pointerDrag;
         Card cardDecorator=cardObject.GetComponent<Card>();
@@ -46,7 +44,7 @@ public class Monster : MonoBehaviour,IDropHandler//生物类
         if(blood<=0)
         {
             //归还给对象池
-            animator.SetInteger("M",3);//死亡
+            animator.SetInteger("M",3);//死亡        
         }
     }
     public void C()
@@ -63,5 +61,4 @@ public class Monster : MonoBehaviour,IDropHandler//生物类
     {
         Debug.Log($"当前血量{blood},护盾{shield}");
     }
-
 }

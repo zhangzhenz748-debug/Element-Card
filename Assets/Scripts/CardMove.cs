@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 public class CardMove : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IDropHandler, IPointerEnterHandler, IPointerExitHandler
 {//卡牌移动
+    public float data=1.2f;//缩放大小
     public bool Move;//移动
     public bool click;//点击
     private Vector2 pos;//点击位置
@@ -62,7 +63,7 @@ public class CardMove : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
             CardMove uINature = obj.GetComponent<CardMove>();
             if (uINature != null && uINature.move)
             {
-                transform.localScale = transform.localScale*1.2f;
+                transform.localScale = transform.localScale*data;
             }
         }
     }

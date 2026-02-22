@@ -1,10 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+[CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/SpawnManagerScriptableObject", order = 1)]
 public class BasicsAttack : ICardEffect//斩击
 {//最基础的单次攻击类
-    public void Excute(AbstractGameAction action)
+    public override void Excute(AbstractGameAction action)
     {
         foreach(var i in action.Targets)
         {

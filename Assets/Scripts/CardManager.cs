@@ -6,9 +6,11 @@ public class CardData
 {
     public string cardName;   // 卡牌名称
     public Sprite cardImage;  // 卡牌图片
+    [SerializeReference]
+    public ICardEffect cardEffect;//卡牌功能
     public int power;         // 你甚至可以顺便加个数值
 }
-public class CardManager : MonoBehaviour
+public class CardManager : MonoBehaviour//卡牌资源类
 {
     public CardData[] cardDatas;
     public static CardManager Cardmanager{get;private set;}

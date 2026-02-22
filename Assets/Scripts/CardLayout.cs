@@ -27,6 +27,7 @@ public class CardLayout : MonoBehaviour//卡牌排序，使用单例模式
     void Start()
     {
         CardPos();
+        EventCenter.Instance.AddEvent("卡牌排序",CardPos);
     }
     public Vector3 Spring(Vector3 current, Vector3 target, int index, float time)//弹簧公式
     {

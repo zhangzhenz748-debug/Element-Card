@@ -79,8 +79,6 @@ public class HandPool : MonoBehaviour//卡牌管理类
     {
         Destroy(game);
     }
-
-
     //弃牌牌组
     public void Fold(Card game)//打出卡牌就添加到这里
     {
@@ -128,7 +126,7 @@ public class HandPool : MonoBehaviour//卡牌管理类
         card.MyImage(card.action.image);//设置图片
         AMD.Add((card.cost, card.action));//添加到手牌组
         //排序
-        CardLayout.Instance.CardPos();
+        EventCenter.Instance.EventTrigger("卡牌排序");
     }
     //回收卡牌
     public void RelseCard()

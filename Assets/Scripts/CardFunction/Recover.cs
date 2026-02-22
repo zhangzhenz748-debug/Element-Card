@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Recover : ICardEffect
 {
-    public void Excute(AbstractGameAction action)
+    public override void Excute(AbstractGameAction action)
     {
         action.Source.blood+=action.harm;
     }

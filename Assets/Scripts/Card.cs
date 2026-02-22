@@ -5,9 +5,9 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 public class Card : MonoBehaviour//卡牌类
 {
-    public ICardEffect cost;
+    public ICardEffect cost;//卡牌功能
     public AbstractGameAction action;//属性
-    public Image image;
+    public Image image;//图片
     void Awake()
     {
         action = new AbstractGameAction();
@@ -21,9 +21,8 @@ public class Card : MonoBehaviour//卡牌类
     public void MyImage(Sprite sprite = null)
     {
         image.sprite = sprite;
-        //image.SetNativeSize();
     }
-    public void Excute()
+    public void Excute()//执行卡牌功能
     {
         cost.Excute(action);
         //卡牌进入弃牌区--这个是出牌后进入弃牌区
@@ -31,6 +30,6 @@ public class Card : MonoBehaviour//卡牌类
         //清除数据
         action.Clase();
         //排序
-        CardLayout.Instance.CardPos();
+        EventCenter.Instance.EventTrigger("卡牌排序");
     }
 }

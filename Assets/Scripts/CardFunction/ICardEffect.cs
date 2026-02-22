@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-public interface ICardEffect//接口
+public abstract class ICardEffect : ScriptableObject 
 {
-    void Excute(AbstractGameAction action);
+    public abstract void Excute(AbstractGameAction action);
 }
