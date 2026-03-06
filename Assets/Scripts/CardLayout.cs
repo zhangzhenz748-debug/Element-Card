@@ -27,7 +27,7 @@ public class CardLayout : MonoBehaviour//卡牌排序，使用单例模式
     void Start()
     {
         CardPos();
-        EventCenter.Instance.AddEvent("卡牌排序",CardPos);
+        EventCenter.Instance.AddEvent("卡牌排序", CardPos);
     }
     public Vector3 Spring(Vector3 current, Vector3 target, int index, float time)//弹簧公式
     {
@@ -39,15 +39,43 @@ public class CardLayout : MonoBehaviour//卡牌排序，使用单例模式
         Velcity[index] += F * time;
         return Velcity[index] * time;
     }
-    public void CardPos()//卡牌的排序
+    public float sortDuration = 0.3f; // 排序动画持续时间
+
+    public void CardPos()
     {
-        int date = transform.childCount;
-        if (date == 0) return;
-        for (int i = 0; i < date; i++)
+        int count = transform.childCount;
+        if (count == 0) return;
+
+        for (int i = 0; i < count; i++)
         {
             Transform child = transform.GetChild(i);
-            float t = date > 1 ? (float)i / (date - 1) : 0.5f;
-            child.transform.localPosition = new Vector3(t * CardWith - CardWith / 2, 0, 0);
+
+            // 1. 计算目标位置 (End Position)
+            float t = count > 1 ? (float)i / (count - 1) : 0.5f;
+            Vector3 targetPos = new Vector3(t * CardWith - CardWith / 2, 0, 0);
+
+            // 2. 开启协程让它滑过去，而不是瞬移
+            StopCoroutine("MoveToTarget"); // 防止上一次排序还没完，重叠冲突
+            StartCoroutine(MoveToTarget(child, targetPos));
         }
+    }
+
+    private IEnumerator MoveToTarget(Transform item, Vector3 target)
+    {
+        float elapsed = 0f;
+        Vector3 startPos = item.localPosition;
+
+        while (elapsed < sortDuration)
+        {
+            elapsed += Time.deltaTime;
+            float percent = elapsed / sortDuration;
+
+            // 使用 Lerp 进行平滑插值
+            item.localPosition = Vector3.Lerp(startPos, target, percent);
+
+            yield return null; // 等待下一帧
+        }
+
+        item.localPosition = target; // 确保最终位置精准对齐
     }
 }

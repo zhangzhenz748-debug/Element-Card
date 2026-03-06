@@ -6,6 +6,6 @@ public class Recover : ICardEffect
 {
     public override void Excute(AbstractGameAction action)
     {
-        action.Source.blood+=action.harm;
+        
     }
 }

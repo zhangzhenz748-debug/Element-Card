@@ -13,7 +13,7 @@ public class FusionPool : MonoBehaviour//融合工厂
                 action = new AbstractGameAction();
                 action.harm = 0;
                 action.name = "斩击";
-                action.image = CardManager.Cardmanager.Cardimage(Cardname1);
+                //action.image = CardManager.Cardmanager.Cardimage(Cardname1);
                 return (new BasicsAttack(), action);
         }
         return (null, null);
