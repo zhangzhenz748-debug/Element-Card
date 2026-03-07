@@ -10,6 +10,7 @@ public class HandPool : MonoBehaviour//卡牌管理类
     public GameObject game;//卡牌预制体
     public Transform transform1;//手牌
     public Transform transform2;//弃牌
+    public int SCard = 0;//初始发牌数量
     public List<string> StartCardList;
     public static HandPool Handpool { get; private set; }//单例
     public ObjectPool<GameObject> pool;//对象池--这个对象池好像存储了我所有的卡牌
@@ -38,6 +39,7 @@ public class HandPool : MonoBehaviour//卡牌管理类
         AMD = new List<CardData>();
         AMDgame = new List<GameObject>();
         Fapai = new List<CardData>();
+        EventCenter.Instance.AddEvent<int>("发牌", CardPool);
     }
     void Start()
     {
@@ -48,7 +50,7 @@ public class HandPool : MonoBehaviour//卡牌管理类
         Fisher(Fapai);//洗牌
         //CardPool(3);//创建5张牌
     }
-    public void AddList(string name)
+    public void AddList(string name)//添加卡牌到卡组
     {
         AddCard(name);
         RelseCard();
@@ -68,7 +70,7 @@ public class HandPool : MonoBehaviour//卡牌管理类
         // 3. 洗牌
         Fisher(Fapai);
         // 4. 初始抽牌
-        CardPool(3);
+        CardPool(SCard);
     }
     public void AddCard(string name)//添加单个卡牌
     {
@@ -125,15 +127,18 @@ public class HandPool : MonoBehaviour//卡牌管理类
     public void Fold(Card game)//打出卡牌就添加到这里
     {
         CardData cardData = game.baseData;
-        GameObject gameObject=game.gameObject;
+        GameObject gameObject = game.gameObject;
         // 安全检查：如果已经在 AMD 列表里，先移除
         if (AMD.Contains(cardData))
         {
             AMD.Remove(cardData);
         }
         fold.Add(cardData);
-        AMDgame.Remove(gameObject);
-        pool.Release(gameObject);//还数据
+        if (AMDgame.Contains(gameObject))
+        {
+            AMDgame.Remove(gameObject);
+            pool.Release(gameObject);//还数据
+        }
     }
     //发牌
     public void CardPool(int x)
@@ -156,16 +161,22 @@ public class HandPool : MonoBehaviour//卡牌管理类
         if (Fapai.Count == 0)
         {
             //如果为空就把弃牌组的拿过来
-            Fapai.AddRange(fold);
+            if (fold.Count != 0)
+            {
+                Fapai.AddRange(fold);
+            }
             // 同样要清空弃牌堆
             fold.Clear();
             Fisher(Fapai);//洗牌
         }
-        card.InitCard(Fapai[0]);
-        AMD.Add(Fapai[0]);//添加到手牌组
-        Fapai.RemoveAt(0);
-        //排序
-        EventCenter.Instance.EventTrigger("卡牌排序");
+        if (Fapai.Count > 0)
+        {
+            card.InitCard(Fapai[0]);
+            AMD.Add(Fapai[0]);//添加到手牌组
+            Fapai.RemoveAt(0);
+            //排序
+            EventCenter.Instance.EventTrigger("卡牌排序");
+        }
     }
     //回收卡牌
     public void RelseCard()

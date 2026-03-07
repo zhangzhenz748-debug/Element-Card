@@ -38,13 +38,6 @@ public class Select : MonoBehaviour//卡牌选择
             GameObject game = pool.Get();
             Card card = game.GetComponent<Card>();
             card.InitCard(CardList[i]);
-            // string name=CardList[i].cardName;//添加卡牌功能
-
-            // var m=CardPlant.Plant(name);
-            // card.cost=m.Item1;
-            // card.action=m.Item2;
-            // card.MyImage(card.action.image);
-            //CardPlant.Plant(name);
             games.Add(game);
         }
     }

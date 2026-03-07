@@ -19,11 +19,11 @@ public class MonsterTrait : MonoBehaviour
     public void init(MonsterM monster)
     {
         Monster = GetComponent<MonsterEvent>();
-        MaxHP=monster.MaxHP;//最大生命值
-        Block=monster.Block;//护盾
-        CurrentHP=monster.CurrentHP;//当前生命值
-        if(image)
-        image.sprite=monster.image;//图片
+        MaxHP = monster.MaxHP;//最大生命值
+        Block = monster.Block;//护盾
+        CurrentHP = monster.CurrentHP;//当前生命值
+        if (image)
+            image.sprite = monster.image;//图片
         Monster.TriggerSignal<(int, int)>("血条", (CurrentHP, MaxHP));
     }
     public void TakeDamage(MonsterBase monster)
@@ -64,15 +64,13 @@ public class MonsterTrait : MonoBehaviour
     {
         EventCenter.Instance.EventTrigger<GameObject>("死亡", gameObject);
     }
-    public void SetMaxHP(MonsterBase monster)
+    public void SetMaxHP(MonsterBase monster)//最大血量值变化
     {
         if (monster is MonsterGame<int> packet)
         {
-            var total = packet.Value;
-            if (total != 0)
-            {
-                MaxHP += total;
-            }
+            int total = packet.Value;
+            MaxHP += total;
+            Monster.TriggerSignal<(int, int)>("血条", (CurrentHP, MaxHP));
         }
         else
         {
@@ -85,8 +83,13 @@ public class MonsterTrait : MonoBehaviour
     {
         if (monster is MonsterGame<int> packet)
         {
-            var total = packet.Value;
-            if (total != 0)
+            int total = packet.Value;
+            //防止超过最大血量
+            if (CurrentHP + total > MaxHP)
+            {
+                CurrentHP = MaxHP;
+            }
+            else
             {
                 CurrentHP += total;
             }

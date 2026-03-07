@@ -30,6 +30,8 @@ public class MonsterDeath : MonoBehaviour
         pool = new ObjectPool<GameObject>(CreateGame, GetGame, RelaseGame, DestroyGame);
         EventCenter.Instance.AddEvent<GameObject>("死亡",DeathEnemies);
         EventCenter.Instance.AddEvent<MonsterBase>("创建敌人",MakeEnemies);
+        MonsterGame<int> monst=new MonsterGame<int>(3);
+        EventCenter.Instance.EventTrigger<MonsterBase>("创建敌人",monst);
     }
     public GameObject CreateGame()
     {
@@ -63,7 +65,7 @@ public class MonsterDeath : MonoBehaviour
                 GameObject Monst=pool.Get();
                 MonsterTrait Trait=Monst.GetComponent<MonsterTrait>();
                 //根据种子来创建敌人
-                Trait.init(monsterMs[0]);
+                Trait.init(monsterMs[UnityEngine.Random.Range(0,monsterMs.Count)]);
             }
         }
         Debug.Log("创建敌人");
@@ -81,7 +83,7 @@ public class MonsterDeath : MonoBehaviour
         {
             //胜利
             EventCenter.Instance.EventTrigger("胜利");
-            EventCenter.Instance.EventTrigger("回合结束");
+            EventCenter.Instance.EventTrigger<bool>("回合结束",false);
             Debug.Log("胜利");
             MonsterGame<int> monster=new MonsterGame<int>(2);
             MakeEnemies(monster);

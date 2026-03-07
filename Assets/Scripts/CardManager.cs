@@ -8,6 +8,7 @@ public class CardData
     public Sprite cardImage;  // 卡牌图片
     [SerializeReference]
     public ICardEffect cardEffect;//卡牌功能
+    public TargetingMode targeting;//卡牌触发类型
     public int power;         // 你甚至可以顺便加个数值
     public int Eneray;//消耗能量
 }

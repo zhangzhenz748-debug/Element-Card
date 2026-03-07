@@ -57,7 +57,11 @@ public class CombatManager : MonoBehaviour
             BattleCommand cmd = ts.Dequeue();
             // --- A. 计算层 (Logic) ---
             // 此时进行数值计算，比如：基础伤害 + 玩家力量 - 敌人护盾
-
+            
+            // --- B. 表现层 (Presentation) ---
+            // 1. 触发攻击动画或卡牌飞向目标的表现
+            yield return new WaitForSeconds(0.3f); // 等待动作前摇
+            // 2. 真正应用数值变化 (扣血/加盾)
             //进行能量检查
             if (eneray._eneray.SetText(cmd.card.baseData.Eneray))
             {
@@ -70,13 +74,12 @@ public class CombatManager : MonoBehaviour
                 }
                 cmd.card.Excute();
             }
-            // --- B. 表现层 (Presentation) ---
-            // 1. 触发攻击动画或卡牌飞向目标的表现
-            yield return new WaitForSeconds(0.3f); // 等待动作前摇
-            // 2. 真正应用数值变化 (扣血/加盾)
             // 3. 停顿，让玩家看清血条减少或数值弹出
             yield return new WaitForSeconds(0.5f);
         }
         _isBusy = false;
     }
+    ///<summary>
+    /// 属性检查:用于将发起者和接受者的属性进行计算
+    /// </summary>
 }

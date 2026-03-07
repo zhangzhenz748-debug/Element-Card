@@ -6,9 +6,10 @@ using UnityEngine.UI;
 
 public class eneray : MonoBehaviour
 {
-    public static eneray _eneray;
+    public static eneray _eneray;//单例
     public int Eneray=4;
     public Text text;
+    public GameObject game;
     void Awake()
     {
         if (_eneray != null && _eneray != this)
@@ -31,6 +32,7 @@ public class eneray : MonoBehaviour
         if(Eneray-date<0)
         {
             Debug.Log("能量不够");
+            StartCoroutine(Show());
         }
         else
         {
@@ -39,6 +41,12 @@ public class eneray : MonoBehaviour
             return true;
         }
         return false;
+    }
+    public IEnumerator Show()
+    {
+        game.SetActive(true);
+        yield return new WaitForSeconds(0.3f);
+        game.SetActive(false);
     }
     // Start is called before the first frame update
 }
