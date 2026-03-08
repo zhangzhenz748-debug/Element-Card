@@ -27,6 +27,11 @@ public class eneray : MonoBehaviour
         Eneray=4;
         text.text=Eneray.ToString();
     }
+    public void SetEneray(int i)
+    {
+        Eneray+=i;
+        text.text=Eneray.ToString();
+    }
     public bool SetText(int date)
     {
         if(Eneray-date<0)
@@ -42,7 +47,7 @@ public class eneray : MonoBehaviour
         }
         return false;
     }
-    public IEnumerator Show()
+    public IEnumerator Show()//显示能量不够
     {
         game.SetActive(true);
         yield return new WaitForSeconds(0.3f);

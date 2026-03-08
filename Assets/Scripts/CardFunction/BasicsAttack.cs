@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-[CreateAssetMenu(fileName = "BasicsAttack", menuName = "ScriptableObjects/BasicsAttack", order = 1)]
+[CreateAssetMenu(fileName = "攻击", menuName = "ScriptableObjects/攻击", order = 1)]
 public class BasicsAttack : ICardEffect//斩击
 {//最基础的单次攻击类
     public int s;//攻击力

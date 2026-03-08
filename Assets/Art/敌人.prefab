@@ -167,6 +167,7 @@ GameObject:
   - component: {fileID: 305445464841398214}
   - component: {fileID: 2465170185441741891}
   - component: {fileID: 1421888326386484288}
+  - component: {fileID: 1209383601490282202}
   m_Layer: 5
   m_Name: "\u654C\u4EBA"
   m_TagString: Untagged
@@ -326,6 +327,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1209383601490282202}
+          m_TargetAssemblyTypeName: ShowShiled, Assembly-CSharp
+          m_MethodName: Shiled
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &305445464841398214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -369,6 +382,20 @@ MonoBehaviour:
   CurrentHP: 120
   image: {fileID: 2114788762453522137}
   attack: {fileID: 0}
+--- !u!114 &1209383601490282202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3862105006441013013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dbe39f176e91ba4fbc2fa550378e269, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  game: {fileID: 5240698313188634179}
+  text: {fileID: 676147225912357228}
 --- !u!1 &4041037137710420345
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,7 +9,9 @@ public class MonsterTrait : MonoBehaviour
     public int CurrentHP;//当前生命值
     public Image image;//图片
     public AttackInterface attack;//攻击方式
+    public State state;//Buff
     private MonsterEvent Monster;
+    
     void Start()
     {
         Monster = GetComponent<MonsterEvent>();
@@ -93,6 +95,7 @@ public class MonsterTrait : MonoBehaviour
             {
                 CurrentHP += total;
             }
+            Monster.TriggerSignal<(int, int)>("血条", (CurrentHP, MaxHP));
         }
         else
         {

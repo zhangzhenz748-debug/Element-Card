@@ -841,12 +841,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 394782900}
+  - {fileID: 863296890}
   - {fileID: 1512168463}
   - {fileID: 900862592}
   - {fileID: 553940568}
   - {fileID: 1047434525}
   - {fileID: 285767408}
-  - {fileID: 863296890}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1481,6 +1481,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 863296890}
+  - component: {fileID: 863296891}
+  - component: {fileID: 863296893}
+  - component: {fileID: 863296892}
   m_Layer: 5
   m_Name: "\u89E6\u53D1\u533A"
   m_TagString: Untagged
@@ -1504,9 +1507,60 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 111.79}
-  m_SizeDelta: {x: 0, y: -223.57}
+  m_AnchoredPosition: {x: 0, y: 197.78384}
+  m_SizeDelta: {x: 0, y: -395.558}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &863296891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 863296889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac9cae8144b23d44eb9f48d5d69f2c37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Mode: 0
+--- !u!114 &863296892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 863296889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &863296893
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 863296889}
+  m_CullTransparentMesh: 1
 --- !u!1 &869860284
 GameObject:
   m_ObjectHideFlags: 0
@@ -1914,16 +1968,16 @@ MonoBehaviour:
   transform2: {fileID: 894806680}
   SCard: 8
   StartCardList:
-  - "\u7EFF\u724C1"
+  - "\u7D2B\u724C2"
   - "\u7EFF\u724C2"
   - "\u7EFF\u724C6"
-  - "\u7EFF\u724C1"
-  - "\u7EFF\u724C1"
-  - "\u7EFF\u724C1"
-  - "\u7EFF\u724C1"
-  - "\u7EFF\u724C1"
-  - "\u7EFF\u724C1"
-  - "\u7EFF\u724C1"
+  - "\u9ED1\u724C3"
+  - "\u7EA2\u724C3"
+  - "\u7EA2\u724C3"
+  - "\u7EA2\u724C3"
+  - "\u9ED1\u724C3"
+  - "\u9ED1\u724C3"
+  - "\u7D2B\u724C2"
   - "\u7EFF\u724C1"
 --- !u!223 &900862594
 Canvas:
@@ -2032,6 +2086,7 @@ GameObject:
   - component: {fileID: 1047434530}
   - component: {fileID: 1047434529}
   - component: {fileID: 1047434531}
+  - component: {fileID: 1047434532}
   m_Layer: 5
   m_Name: "\u73A9\u5BB6\u72B6\u6001"
   m_TagString: Untagged
@@ -2210,6 +2265,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1047434532}
+          m_TargetAssemblyTypeName: ShowShiled, Assembly-CSharp
+          m_MethodName: Shiled
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - signalName: "\u56DE\u8840"
     response:
       m_PersistentCalls:
@@ -2226,6 +2293,20 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &1047434532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1047434524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dbe39f176e91ba4fbc2fa550378e269, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  game: {fileID: 2002711851}
+  text: {fileID: 1522878569}
 --- !u!1 &1052853032
 GameObject:
   m_ObjectHideFlags: 0
@@ -3380,175 +3461,175 @@ MonoBehaviour:
     cardEffect: {fileID: 11400000, guid: 0407fbd277b96374187b7bfe316635a3, type: 2}
     targeting: 0
     power: 2
-    Eneray: 0
+    Eneray: 1
   - cardName: "\u9ED1\u724C3"
     cardImage: {fileID: -1738132208, guid: bad08c95f89d1f845a97f2b204718377, type: 3}
     cardEffect: {fileID: 11400000, guid: 0407fbd277b96374187b7bfe316635a3, type: 2}
     targeting: 0
     power: 3
-    Eneray: 0
+    Eneray: 1
   - cardName: "\u9ED1\u724C4"
     cardImage: {fileID: -204046033, guid: bad08c95f89d1f845a97f2b204718377, type: 3}
-    cardEffect: {fileID: 0}
+    cardEffect: {fileID: 11400000, guid: 0407fbd277b96374187b7bfe316635a3, type: 2}
     targeting: 0
     power: 4
-    Eneray: 0
+    Eneray: 1
   - cardName: "\u9ED1\u724C5"
     cardImage: {fileID: 1984982771, guid: bad08c95f89d1f845a97f2b204718377, type: 3}
-    cardEffect: {fileID: 0}
+    cardEffect: {fileID: 11400000, guid: 0407fbd277b96374187b7bfe316635a3, type: 2}
     targeting: 0
     power: 5
-    Eneray: 0
+    Eneray: 1
   - cardName: "\u9ED1\u724C6"
     cardImage: {fileID: -377760119, guid: bad08c95f89d1f845a97f2b204718377, type: 3}
     cardEffect: {fileID: 11400000, guid: 0407fbd277b96374187b7bfe316635a3, type: 2}
     targeting: 0
     power: 6
-    Eneray: 0
+    Eneray: 1
   - cardName: "\u9ED1\u724C7"
     cardImage: {fileID: 1427332409, guid: bad08c95f89d1f845a97f2b204718377, type: 3}
     cardEffect: {fileID: 11400000, guid: 0407fbd277b96374187b7bfe316635a3, type: 2}
     targeting: 0
     power: 7
-    Eneray: 0
+    Eneray: 1
   - cardName: "\u9ED1\u724C8"
     cardImage: {fileID: 738644445, guid: bad08c95f89d1f845a97f2b204718377, type: 3}
     cardEffect: {fileID: 11400000, guid: 0407fbd277b96374187b7bfe316635a3, type: 2}
     targeting: 0
     power: 8
-    Eneray: 0
+    Eneray: 1
   - cardName: "\u9ED1\u724C9"
     cardImage: {fileID: -1771264213, guid: bad08c95f89d1f845a97f2b204718377, type: 3}
     cardEffect: {fileID: 11400000, guid: 0407fbd277b96374187b7bfe316635a3, type: 2}
     targeting: 0
     power: 9
-    Eneray: 0
+    Eneray: 1
   - cardName: "\u9ED1\u724C10"
     cardImage: {fileID: 1709126986, guid: bad08c95f89d1f845a97f2b204718377, type: 3}
     cardEffect: {fileID: 11400000, guid: 0407fbd277b96374187b7bfe316635a3, type: 2}
     targeting: 0
     power: 10
-    Eneray: 0
+    Eneray: 1
   - cardName: "\u9ED1\u724C11"
     cardImage: {fileID: -728096000, guid: bad08c95f89d1f845a97f2b204718377, type: 3}
     cardEffect: {fileID: 11400000, guid: 0407fbd277b96374187b7bfe316635a3, type: 2}
     targeting: 0
     power: 11
-    Eneray: 0
+    Eneray: 1
   - cardName: "\u9ED1\u724C12"
     cardImage: {fileID: 310491424, guid: bad08c95f89d1f845a97f2b204718377, type: 3}
     cardEffect: {fileID: 11400000, guid: 0407fbd277b96374187b7bfe316635a3, type: 2}
     targeting: 0
     power: 12
-    Eneray: 0
+    Eneray: 1
   - cardName: "\u9ED1\u724C13"
     cardImage: {fileID: -833069310, guid: bad08c95f89d1f845a97f2b204718377, type: 3}
     cardEffect: {fileID: 11400000, guid: 0407fbd277b96374187b7bfe316635a3, type: 2}
     targeting: 0
     power: 13
-    Eneray: 0
+    Eneray: 1
   - cardName: "\u7EA2\u724C1"
     cardImage: {fileID: -9530238, guid: bad08c95f89d1f845a97f2b204718377, type: 3}
-    cardEffect: {fileID: 0}
+    cardEffect: {fileID: 11400000, guid: 290fcbdd9d6f80842990838e4609e2c4, type: 2}
     targeting: 0
-    power: 0
-    Eneray: 0
+    power: 1
+    Eneray: 1
   - cardName: "\u7EA2\u724C2"
     cardImage: {fileID: 1299173157, guid: bad08c95f89d1f845a97f2b204718377, type: 3}
-    cardEffect: {fileID: 0}
+    cardEffect: {fileID: 11400000, guid: 290fcbdd9d6f80842990838e4609e2c4, type: 2}
     targeting: 0
-    power: 0
-    Eneray: 0
+    power: 2
+    Eneray: 1
   - cardName: "\u7EA2\u724C3"
     cardImage: {fileID: 814394216, guid: bad08c95f89d1f845a97f2b204718377, type: 3}
-    cardEffect: {fileID: 0}
+    cardEffect: {fileID: 11400000, guid: 290fcbdd9d6f80842990838e4609e2c4, type: 2}
     targeting: 0
-    power: 0
-    Eneray: 0
+    power: 3
+    Eneray: 1
   - cardName: "\u7EA2\u724C4"
     cardImage: {fileID: -1032130651, guid: bad08c95f89d1f845a97f2b204718377, type: 3}
-    cardEffect: {fileID: 0}
+    cardEffect: {fileID: 11400000, guid: 290fcbdd9d6f80842990838e4609e2c4, type: 2}
     targeting: 0
-    power: 0
-    Eneray: 0
+    power: 4
+    Eneray: 1
   - cardName: "\u7EA2\u724C5"
     cardImage: {fileID: -248541555, guid: bad08c95f89d1f845a97f2b204718377, type: 3}
-    cardEffect: {fileID: 0}
+    cardEffect: {fileID: 11400000, guid: 290fcbdd9d6f80842990838e4609e2c4, type: 2}
     targeting: 0
-    power: 0
-    Eneray: 0
+    power: 5
+    Eneray: 1
   - cardName: "\u7EA2\u724C6"
     cardImage: {fileID: -37481354, guid: bad08c95f89d1f845a97f2b204718377, type: 3}
-    cardEffect: {fileID: 0}
+    cardEffect: {fileID: 11400000, guid: 290fcbdd9d6f80842990838e4609e2c4, type: 2}
     targeting: 0
-    power: 0
-    Eneray: 0
+    power: 6
+    Eneray: 1
   - cardName: "\u7EA2\u724C7"
     cardImage: {fileID: 1451500745, guid: bad08c95f89d1f845a97f2b204718377, type: 3}
-    cardEffect: {fileID: 0}
+    cardEffect: {fileID: 11400000, guid: 290fcbdd9d6f80842990838e4609e2c4, type: 2}
     targeting: 0
-    power: 0
-    Eneray: 0
+    power: 7
+    Eneray: 1
   - cardName: "\u7EA2\u724C8"
     cardImage: {fileID: -83967375, guid: bad08c95f89d1f845a97f2b204718377, type: 3}
-    cardEffect: {fileID: 0}
+    cardEffect: {fileID: 11400000, guid: 290fcbdd9d6f80842990838e4609e2c4, type: 2}
     targeting: 0
-    power: 0
-    Eneray: 0
+    power: 8
+    Eneray: 1
   - cardName: "\u7EA2\u724C9"
     cardImage: {fileID: 473518469, guid: bad08c95f89d1f845a97f2b204718377, type: 3}
-    cardEffect: {fileID: 0}
+    cardEffect: {fileID: 11400000, guid: 290fcbdd9d6f80842990838e4609e2c4, type: 2}
     targeting: 0
-    power: 0
-    Eneray: 0
+    power: 9
+    Eneray: 1
   - cardName: "\u7EA2\u724C10"
     cardImage: {fileID: -1538597144, guid: bad08c95f89d1f845a97f2b204718377, type: 3}
-    cardEffect: {fileID: 0}
+    cardEffect: {fileID: 11400000, guid: 290fcbdd9d6f80842990838e4609e2c4, type: 2}
     targeting: 0
-    power: 0
-    Eneray: 0
+    power: 10
+    Eneray: 1
   - cardName: "\u7EA2\u724C11"
     cardImage: {fileID: 799142217, guid: bad08c95f89d1f845a97f2b204718377, type: 3}
-    cardEffect: {fileID: 0}
+    cardEffect: {fileID: 11400000, guid: 290fcbdd9d6f80842990838e4609e2c4, type: 2}
     targeting: 0
-    power: 0
-    Eneray: 0
+    power: 11
+    Eneray: 1
   - cardName: "\u7EA2\u724C12"
     cardImage: {fileID: 655318193, guid: bad08c95f89d1f845a97f2b204718377, type: 3}
-    cardEffect: {fileID: 0}
+    cardEffect: {fileID: 11400000, guid: 290fcbdd9d6f80842990838e4609e2c4, type: 2}
     targeting: 0
-    power: 0
+    power: 12
     Eneray: 0
   - cardName: "\u7EA2\u724C13"
     cardImage: {fileID: 718788261, guid: bad08c95f89d1f845a97f2b204718377, type: 3}
-    cardEffect: {fileID: 0}
+    cardEffect: {fileID: 11400000, guid: 290fcbdd9d6f80842990838e4609e2c4, type: 2}
     targeting: 0
-    power: 0
-    Eneray: 0
+    power: 13
+    Eneray: 1
   - cardName: "\u7D2B\u724C1"
     cardImage: {fileID: 1682154659, guid: bad08c95f89d1f845a97f2b204718377, type: 3}
-    cardEffect: {fileID: 0}
+    cardEffect: {fileID: 11400000, guid: 239a929ec5af5494487a77efa427969b, type: 2}
     targeting: 0
-    power: 0
+    power: 1
     Eneray: 0
   - cardName: "\u7D2B\u724C2"
     cardImage: {fileID: 1768017527, guid: bad08c95f89d1f845a97f2b204718377, type: 3}
-    cardEffect: {fileID: 0}
+    cardEffect: {fileID: 11400000, guid: 239a929ec5af5494487a77efa427969b, type: 2}
     targeting: 0
-    power: 0
+    power: 2
     Eneray: 0
   - cardName: "\u7D2B\u724C3"
     cardImage: {fileID: -1850721987, guid: bad08c95f89d1f845a97f2b204718377, type: 3}
-    cardEffect: {fileID: 0}
+    cardEffect: {fileID: 11400000, guid: 239a929ec5af5494487a77efa427969b, type: 2}
     targeting: 0
-    power: 0
-    Eneray: 0
+    power: 3
+    Eneray: 1
   - cardName: "\u7D2B\u724C4"
     cardImage: {fileID: -470341917, guid: bad08c95f89d1f845a97f2b204718377, type: 3}
-    cardEffect: {fileID: 0}
+    cardEffect: {fileID: 11400000, guid: 239a929ec5af5494487a77efa427969b, type: 2}
     targeting: 0
-    power: 0
-    Eneray: 0
+    power: 4
+    Eneray: 1
   - cardName: "\u7D2B\u724C5"
     cardImage: {fileID: 1380115656, guid: bad08c95f89d1f845a97f2b204718377, type: 3}
     cardEffect: {fileID: 0}
@@ -3908,7 +3989,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 50, y: -59.919106}
+  m_AnchoredPosition: {x: 50, y: -70.4458}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1616629682
@@ -4061,7 +4142,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -4.999634}
+  m_AnchoredPosition: {x: 0, y: -4.999695}
   m_SizeDelta: {x: -40, y: -10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1779821441

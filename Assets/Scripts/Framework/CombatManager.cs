@@ -25,6 +25,12 @@ public class CombatManager : MonoBehaviour
         combatManager = this;
         ts = new Queue<BattleCommand>();
         action=new AbstractGameAction();
+        EventCenter.Instance.AddEvent<BattleCommand>("战斗",SetbattleCommand);
+    }
+    public void SetbattleCommand(BattleCommand command)
+    {
+        if(command!=null)
+        StartCombat(command);
     }
     public void SetbattleCommand(MonsterTrait caster, MonsterTrait monster, Card card)
     {
